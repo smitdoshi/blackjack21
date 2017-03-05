@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlackJack_using_StackView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="j82-5C-h5s"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="m8P-d1-Xpg">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Epi-1e-X51">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Epi-1e-X51" secondAttribute="height" multiplier="122:67" id="dnM-a8-apa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="tZo-wY-84h" userLabel="CardStackView">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="TBo-DY-xxu" userLabel="FirstCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TBo-DY-xxu" secondAttribute="height" multiplier="120:170" id="sRl-6R-8Fo"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-yF-Wiv" userLabel="SecondCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="U3k-yF-Wiv" secondAttribute="height" multiplier="120:170" id="H0m-xt-xZ6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MbJ-Fs-jPy" userLabel="ThirdCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MbJ-Fs-jPy" secondAttribute="height" multiplier="120:170" id="ime-J8-NjC"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7nf-3j-i5D" userLabel="FourthCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7nf-3j-i5D" secondAttribute="height" multiplier="120:170" id="hHH-Di-hOQ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5NX-ab-yVL" userLabel="SplitCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5NX-ab-yVL" secondAttribute="height" multiplier="120:170" id="hfc-vD-KhD"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xAd-mi-dMm" userLabel="ButtonStackView">
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whq-rD-QZP">
+                                                <state key="normal" image="dealbutton"/>
+                                                <connections>
+                                                    <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCc-Y7-Xts"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-Wn-hzp">
+                                                <state key="normal" image="SplitAces"/>
+                                                <connections>
+                                                    <action selector="splitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8P-up-Ppa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-I6-Bo4" userLabel="Player's Card Value">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UJC-rJ-cB6" userLabel="LeftScoreLabelStackViews">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sa-pJ-2r8">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-T2-iEt" userLabel="playerCardValue">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="11T-pf-CvS" userLabel="RightScoreLabelStackViews">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cma-5e-ObU">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY2-Ml-BEq" userLabel="cpuCardValue">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="yFP-UG-Teq" userLabel="D_CardStackView">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="A3b-UZ-AVe" userLabel="D_FirstCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="A3b-UZ-AVe" secondAttribute="height" multiplier="120:170" id="IeO-2y-hv6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qWm-at-iko" userLabel="D_SecondCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qWm-at-iko" secondAttribute="height" multiplier="120:170" id="2sT-ZU-MGE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NfV-nO-heh" userLabel="D_ThirdCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="NfV-nO-heh" secondAttribute="height" multiplier="120:170" id="xnF-Ab-pj1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-mV-UGC" userLabel="D_FourthCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cxI-mV-UGC" secondAttribute="height" multiplier="120:170" id="fAt-Hm-PLD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k2T-qa-MzW" userLabel="D_SplitCard">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="k2T-qa-MzW" secondAttribute="height" multiplier="120:170" id="jyQ-OD-2ub"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="XaB-kr-q9B" userLabel="ScoreLabelStackViews">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nZB-3f-uvd" userLabel="LeftScoreLabelStackViews">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-V9-w3z">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgS-lV-5HA">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KK5-sz-aqa" userLabel="RightScoreLabelStackViews">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdA-IU-zfb">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7S-FX-SvT">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="j82-5C-h5s" secondAttribute="trailing" id="DNT-8o-QwG"/>
+                            <constraint firstItem="j82-5C-h5s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ONI-Hf-WNX"/>
+                            <constraint firstItem="m8P-d1-Xpg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xc8-pD-pF0"/>
+                            <constraint firstItem="j82-5C-h5s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xub-ZO-OGa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m8P-d1-Xpg" secondAttribute="bottom" id="XyZ-hL-Djm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m8P-d1-Xpg" secondAttribute="trailing" id="dEX-iQ-e47"/>
+                            <constraint firstAttribute="bottom" secondItem="j82-5C-h5s" secondAttribute="bottom" id="p4P-2t-8ow"/>
+                            <constraint firstItem="m8P-d1-Xpg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yft-qb-bAz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="D_firstImageView" destination="A3b-UZ-AVe" id="2UI-cN-BOv"/>
+                        <outlet property="D_fourthImageView" destination="cxI-mV-UGC" id="d4l-3b-s68"/>
+                        <outlet property="D_secondImageView" destination="qWm-at-iko" id="6JV-Mz-xqo"/>
+                        <outlet property="D_splitImageView" destination="k2T-qa-MzW" id="bYq-jB-lzU"/>
+                        <outlet property="D_thirdImageView" destination="NfV-nO-heh" id="OMF-un-mHw"/>
+                        <outlet property="cpuCardLabel" destination="uY2-Ml-BEq" id="kMX-ZU-EBy"/>
+                        <outlet property="dealButton" destination="Whq-rD-QZP" id="pSm-jW-2sN"/>
+                        <outlet property="firstImageView" destination="TBo-DY-xxu" id="EGV-5S-x0c"/>
+                        <outlet property="fourthImageView" destination="7nf-3j-i5D" id="f8Y-xH-6QM"/>
+                        <outlet property="leftScoreLabel" destination="GgS-lV-5HA" id="lT9-YM-VMY"/>
+                        <outlet property="playerCardValue" destination="HxX-T2-iEt" id="jD8-Hh-i3u"/>
+                        <outlet property="rightScoreLabel" destination="e7S-FX-SvT" id="HN4-ty-GGz"/>
+                        <outlet property="secondImageView" destination="U3k-yF-Wiv" id="3Zi-si-xqi"/>
+                        <outlet property="splitButton" destination="rvA-Wn-hzp" id="Nmb-ed-vOE"/>
+                        <outlet property="splitImageView" destination="5NX-ab-yVL" id="Vne-NA-dp8"/>
+                        <outlet property="thirdImageView" destination="MbJ-Fs-jPy" id="Pwg-qE-DrX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SplitAces" width="81" height="31"/>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="666" height="621"/>
+        <image name="dealbutton" width="81" height="31"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
+</document>
